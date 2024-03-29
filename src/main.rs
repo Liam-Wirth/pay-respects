@@ -31,7 +31,7 @@ fn main() {
 	let shell = match std::env::var("_PR_SHELL") {
 		Ok(shell) => shell,
 		Err(_) => {
-			eprintln!("No _PR_SHELL in environment. Did you aliased the command with the correct argument?\n\nUse `pay-respects -h` for help");
+			eprintln!("No _PR_SHELL in environment. Have you aliased the command with the correct argument?\n\nUse `pay-respects -h` for help");
 			std::process::exit(1);
 		}
 	};
@@ -75,6 +75,6 @@ fn main() {
 		last_command.red()
 	);
 	eprintln!(
-		"If you think there should be a correction, please open an issue or send a pull request!"
+		"If you think there should be a correction, please open an issue or send a pull request! "
 	);
 }
